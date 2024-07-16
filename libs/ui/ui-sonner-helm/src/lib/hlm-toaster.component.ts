@@ -27,8 +27,7 @@ import { NgxSonnerToaster, ToasterProps } from 'ngx-sonner';
       [offset]="offset()"
       [dir]="dir()"
       [class]="_class()"
-      [style]="_style()"
-    />
+      [style]="_style()" />
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

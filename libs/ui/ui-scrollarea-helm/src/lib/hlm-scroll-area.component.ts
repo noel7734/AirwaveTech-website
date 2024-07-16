@@ -27,8 +27,7 @@ import { NgScrollbarModule } from 'ngx-scrollbar';
         '--scrollbar-thumb-color': 'hsl(var(--border)',
         '--scrollbar-thumb-hover-color': 'hsl(var(--border)',
         '--scrollbar-size': '7px',
-      }"
-    >
+      }">
       <ng-content />
     </ng-scrollbar>
   `,
@@ -40,7 +39,7 @@ import { NgScrollbarModule } from 'ngx-scrollbar';
 })
 export class HlmScrollAreaComponent {
   protected readonly _computedClass = computed(() =>
-    hlm('block', this._class()),
+    hlm('block', this._class())
   );
 
   @Input()
@@ -77,6 +76,6 @@ export class HlmScrollAreaComponent {
   }
 
   protected readonly _visibility = signal<'hover' | 'always' | 'native'>(
-    'native',
+    'native'
   );
 }

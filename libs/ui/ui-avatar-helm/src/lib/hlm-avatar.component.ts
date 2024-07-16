@@ -25,7 +25,7 @@ export const avatarVariants = cva(
     defaultVariants: {
       variant: 'medium',
     },
-  },
+  }
 );
 
 type AvatarVariants = VariantProps<typeof avatarVariants>;
@@ -49,7 +49,7 @@ type AvatarVariants = VariantProps<typeof avatarVariants>;
 export class HlmAvatarComponent extends BrnAvatarComponent {
   public readonly userClass = input<ClassValue>('', { alias: 'class' });
   protected readonly _computedClass = computed(() =>
-    hlm(avatarVariants({ variant: this._variant() }), this.userClass()),
+    hlm(avatarVariants({ variant: this._variant() }), this.userClass())
   );
 
   private readonly _variant = signal<AvatarVariants['variant']>('medium');

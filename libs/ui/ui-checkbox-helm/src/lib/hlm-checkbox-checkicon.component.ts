@@ -26,7 +26,7 @@ export class HlmCheckboxCheckIconComponent {
     hlm(
       'h-4 w-4 leading-none group-data-[state=unchecked]:opacity-0',
       this._checked() === 'indeterminate' ? 'opacity-50' : '',
-      this.userClass(),
-    ),
+      this.userClass()
+    )
   );
 }

@@ -22,6 +22,6 @@ export class HlmPaginationDirective {
   public readonly class = input<ClassValue>('');
 
   protected _computedClass = computed(() =>
-    hlm(paginationVariants(), this.class()),
+    hlm(paginationVariants(), this.class())
   );
 }

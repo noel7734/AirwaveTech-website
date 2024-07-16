@@ -28,8 +28,8 @@ export class HlmProgressIndicatorDirective implements DoCheck {
   protected _computedClass = computed(() =>
     hlm(
       'inline-flex transform-gpu h-full w-full flex-1 bg-primary transition-all',
-      this.userClass(),
-    ),
+      this.userClass()
+    )
   );
 
   constructor() {
@@ -39,17 +39,17 @@ export class HlmProgressIndicatorDirective implements DoCheck {
       this._renderer.setStyle(
         this._element.nativeElement,
         'transform',
-        `translateX(-${100 - (currentValue || 100)}%)`,
+        `translateX(-${100 - (currentValue || 100)}%)`
       );
       if (!currentValue) {
         this._renderer.addClass(
           this._element.nativeElement,
-          'animate-indeterminate',
+          'animate-indeterminate'
         );
       } else {
         this._renderer.removeClass(
           this._element.nativeElement,
-          'animate-indeterminate',
+          'animate-indeterminate'
         );
       }
     });

@@ -37,8 +37,7 @@ import {
       [plugins]="plugins()"
       [options]="emblaOptions()"
       [subscribeToEvents]="['init', 'select', 'reInit']"
-      (emblaChange)="onEmblaEvent($event)"
-    >
+      (emblaChange)="onEmblaEvent($event)">
       <ng-content select="hlm-carousel-content" />
     </div>
     <ng-content />

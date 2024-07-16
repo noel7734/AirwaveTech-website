@@ -14,7 +14,7 @@ export class HlmRadioDirective {
   protected _computedClass = computed(() =>
     hlm(
       'group [&.brn-radio-disabled]:text-muted-foreground flex items-center space-x-2',
-      this.userClass(),
-    ),
+      this.userClass()
+    )
   );
 }

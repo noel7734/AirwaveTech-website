@@ -23,7 +23,7 @@ import { BrnTooltipTriggerDirective } from '@spartan-ng/ui-tooltip-brain';
 export class HlmTooltipTriggerDirective {
   private readonly _brnTooltipTrigger: BrnTooltipTriggerDirective = inject(
     BrnTooltipTriggerDirective,
-    { host: true },
+    { host: true }
   );
 
   constructor() {

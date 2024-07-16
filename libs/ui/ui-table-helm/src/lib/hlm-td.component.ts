@@ -45,7 +45,7 @@ export class HlmTdComponent {
     hlm(
       'flex flex-none p-4 items-center [&:has([role=checkbox])]:pr-0',
       this._columnDef?.class(),
-      this.userClass(),
-    ),
+      this.userClass()
+    )
   );
 }

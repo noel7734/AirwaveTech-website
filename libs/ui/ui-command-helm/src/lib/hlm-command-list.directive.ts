@@ -12,6 +12,6 @@ import type { ClassValue } from 'clsx';
 export class HlmCommandListDirective {
   public readonly userClass = input<ClassValue>('', { alias: 'class' });
   protected _computedClass = computed(() =>
-    hlm('max-h-[300px] overflow-y-auto overflow-x-hidden', this.userClass()),
+    hlm('max-h-[300px] overflow-y-auto overflow-x-hidden', this.userClass())
   );
 }

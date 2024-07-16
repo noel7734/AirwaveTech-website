@@ -49,7 +49,7 @@ export const badgeVariants = cva(
       size: 'default',
       static: false,
     },
-  },
+  }
 );
 type badgeVariants = VariantProps<typeof badgeVariants>;
 
@@ -69,8 +69,8 @@ export class HlmBadgeDirective {
         size: this._size(),
         static: this._static(),
       }),
-      this.userClass(),
-    ),
+      this.userClass()
+    )
   );
 
   private readonly _variant = signal<badgeVariants['variant']>('default');

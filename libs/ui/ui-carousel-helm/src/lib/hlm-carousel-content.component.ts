@@ -28,7 +28,7 @@ export class HlmCarouselContentComponent {
     hlm(
       'flex',
       this.orientation() === 'horizontal' ? '-ml-4' : '-mt-4 flex-col',
-      this._userClass(),
-    ),
+      this._userClass()
+    )
   );
 }

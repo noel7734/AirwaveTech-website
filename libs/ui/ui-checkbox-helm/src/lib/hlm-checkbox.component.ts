@@ -36,12 +36,10 @@ export const HLM_CHECKBOX_VALUE_ACCESSOR = {
       [aria-labelledby]="ariaLabelledby()"
       [aria-describedby]="ariaDescribedby()"
       (changed)="_handleChange()"
-      (touched)="_onTouched()"
-    >
+      (touched)="_onTouched()">
       <hlm-checkbox-checkicon
         [class]="checkIconClass()"
-        [iconName]="checkIconName()"
-      />
+        [iconName]="checkIconName()" />
     </brn-checkbox>
   `,
   host: {
@@ -60,8 +58,8 @@ export class HlmCheckboxComponent {
       'group inline-flex border border-foreground shrink-0 cursor-pointer items-center rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring' +
         ' focus-visible:ring-offset-2 focus-visible:ring-offset-background data-[state=checked]:text-background data-[state=checked]:bg-primary data-[state=unchecked]:bg-background',
       this.userClass(),
-      this.disabled() ? 'cursor-not-allowed opacity-50' : '',
-    ),
+      this.disabled() ? 'cursor-not-allowed opacity-50' : ''
+    )
   );
 
   /** Used to set the id on the underlying brn element. */
@@ -100,7 +98,7 @@ export class HlmCheckboxComponent {
 
     const previousChecked = this.checked();
     this.checked.set(
-      previousChecked === 'indeterminate' ? true : !previousChecked,
+      previousChecked === 'indeterminate' ? true : !previousChecked
     );
     this._onChange(!previousChecked);
     this.changed.emit(!previousChecked);

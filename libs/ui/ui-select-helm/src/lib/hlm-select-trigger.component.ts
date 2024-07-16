@@ -32,7 +32,7 @@ export const selectTriggerVariants = cva(
       size: 'default',
       error: 'auto',
     },
-  },
+  }
 );
 type SelectTriggerVariants = VariantProps<typeof selectTriggerVariants>;
 
@@ -47,8 +47,7 @@ type SelectTriggerVariants = VariantProps<typeof selectTriggerVariants>;
       #button
       hlmInput
       brnSelectTrigger
-      type="button"
-    >
+      type="button">
       <ng-content />
       @if (icon) {
         <ng-content select="hlm-icon" />
@@ -72,7 +71,7 @@ export class HlmSelectTriggerComponent {
   protected _computedClass = computed(() =>
     hlm(
       selectTriggerVariants({ size: this._size(), error: this._error() }),
-      this.userClass(),
-    ),
+      this.userClass()
+    )
   );
 }

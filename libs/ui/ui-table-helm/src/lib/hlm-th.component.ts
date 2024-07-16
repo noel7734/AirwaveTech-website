@@ -45,7 +45,7 @@ export class HlmThComponent {
     hlm(
       'flex flex-none h-12 px-4 text-sm items-center font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0',
       this._columnDef?.class(),
-      this.userClass(),
-    ),
+      this.userClass()
+    )
   );
 }

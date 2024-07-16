@@ -10,8 +10,7 @@ import { HlmSwitchComponent } from './hlm-switch.component';
         [(ngModel)]="switchValue"
         id="testSwitchForm"
         aria-label="test switch"
-        (changed)="handleChange($event)"
-      />
+        (changed)="handleChange($event)" />
     </label>
 
     <p data-testid="switchValue">{{ switchValue }}</p>

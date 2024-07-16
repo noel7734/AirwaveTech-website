@@ -16,7 +16,7 @@ export const alertVariants = cva(
     defaultVariants: {
       variant: 'default',
     },
-  },
+  }
 );
 export type AlertVariants = VariantProps<typeof alertVariants>;
 
@@ -31,7 +31,7 @@ export type AlertVariants = VariantProps<typeof alertVariants>;
 export class HlmAlertDirective {
   public readonly userClass = input<ClassValue>('', { alias: 'class' });
   protected _computedClass = computed(() =>
-    hlm(alertVariants({ variant: this._variant() }), this.userClass()),
+    hlm(alertVariants({ variant: this._variant() }), this.userClass())
   );
 
   private readonly _variant = signal<AlertVariants['variant']>('default');

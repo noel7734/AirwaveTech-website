@@ -16,7 +16,7 @@ const parseDividedString = (value: NumberInput): NumberInput => {
   if (typeof value !== 'string' || !value.includes('/')) return value;
   return value
     .split('/')
-    .map((v) => Number.parseInt(v, 10))
+    .map(v => Number.parseInt(v, 10))
     .reduce((a, b) => a / b);
 };
 
@@ -38,7 +38,7 @@ export class HlmAspectRatioDirective implements AfterViewInit {
 
   public readonly userClass = input<ClassValue>('', { alias: 'class' });
   protected readonly _computedClass = computed(() =>
-    hlm('relative w-full', this.userClass()),
+    hlm('relative w-full', this.userClass())
   );
 
   @Input()

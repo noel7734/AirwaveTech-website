@@ -57,8 +57,7 @@ const TAILWIND_H_W_PATTERN = /\b(h-\d+|w-\d+)\b/g;
       [size]="ngIconSize()"
       [name]="_name()"
       [color]="_color()"
-      [strokeWidth]="_strokeWidth()"
-    />
+      [strokeWidth]="_strokeWidth()" />
   `,
   host: {
     '[class]': '_computedClass()',
@@ -76,11 +75,11 @@ export class HlmIconComponent implements OnDestroy {
   protected readonly _size = signal<IconSize>('base');
   protected readonly _color = signal<string | undefined>(undefined);
   protected readonly _strokeWidth = signal<string | number | undefined>(
-    undefined,
+    undefined
   );
   protected readonly userCls = signal<ClassValue>('');
   protected readonly ngIconSize = computed(() =>
-    isDefinedSize(this._size()) ? '100%' : (this._size() as string),
+    isDefinedSize(this._size()) ? '100%' : (this._size() as string)
   );
   protected readonly ngIconCls = signal<ClassValue>('');
 
@@ -102,7 +101,7 @@ export class HlmIconComponent implements OnDestroy {
         mutations.forEach((mutation: MutationRecord) => {
           if (mutation.attributeName !== 'class') return;
           this._hostClasses.set(
-            (mutation.target as Node & { className?: string })?.className ?? '',
+            (mutation.target as Node & { className?: string })?.className ?? ''
           );
         });
       });

@@ -23,7 +23,7 @@ export class HlmDialogService {
 
   public open(
     component: ComponentType<unknown> | TemplateRef<unknown>,
-    options?: Partial<HlmDialogOptions>,
+    options?: Partial<HlmDialogOptions>
   ) {
     options = {
       ...DEFAULT_BRN_DIALOG_OPTIONS,
@@ -31,7 +31,7 @@ export class HlmDialogService {
       // eslint-disable-next-line
       ...(options ?? {}),
       backdropClass: cssClassesToArray(
-        `${hlmDialogOverlayClass} ${options?.backdropClass ?? ''}`,
+        `${hlmDialogOverlayClass} ${options?.backdropClass ?? ''}`
       ),
       context: {
         ...options?.context,
@@ -44,7 +44,7 @@ export class HlmDialogService {
       HlmDialogContentComponent,
       undefined,
       options.context,
-      options,
+      options
     );
   }
 }

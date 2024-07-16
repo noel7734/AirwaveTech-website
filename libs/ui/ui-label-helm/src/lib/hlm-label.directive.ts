@@ -32,7 +32,7 @@ export const labelVariants = cva(
       variant: 'default',
       error: 'auto',
     },
-  },
+  }
 );
 export type LabelVariants = VariantProps<typeof labelVariants>;
 
@@ -61,8 +61,8 @@ export class HlmLabelDirective {
         disabled: this._brn?.dataDisabled() ?? 'auto',
       }),
       '[&.ng-invalid.ng-touched]:text-destructive',
-      this.userClass(),
-    ),
+      this.userClass()
+    )
   );
 
   private readonly _variant = signal<LabelVariants['variant']>('default');
